@@ -32,7 +32,7 @@ KHTML rendering engine. The KHTML JavaScript interpreter is KJS.
 %package libs-devel
 Summary:	Development library for gtk-webcore-jscore
 Group:		X11/Development/Libraries
-Requires:	%{name} = %{version}-%{release}
+Requires:	%{name}-libs = %{version}-%{release}
 
 %description libs-devel
 gtk-webcore-jscore is a port of the JavaScriptCore JavaScript
