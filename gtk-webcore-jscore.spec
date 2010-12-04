@@ -8,6 +8,7 @@ License:	LGPL v2+
 Group:		Libraries
 Source0:	%{name}-%{snap}.tar.bz2
 # Source0-md5:	1c87fa5d754e9ce7957c3f52f73301fe
+Patch0:		gcc43.patch
 URL:		http://gtk-webcore.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -76,6 +77,7 @@ Statyczna biblioteka gtk-webcore-jscore.
 
 %prep
 %setup -q -n %{name}
+%patch0 -p1
 
 %build
 %{__libtoolize}

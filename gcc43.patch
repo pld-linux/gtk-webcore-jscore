@@ -1,0 +1,20 @@
+--- gtk-webcore-jscore/kjs/protected_values.cpp.orig	2010-12-04 18:02:30.004753676 +0100
++++ gtk-webcore-jscore/kjs/protected_values.cpp	2010-12-04 18:13:37.194683715 +0100
+@@ -195,7 +195,7 @@ const unsigned PHI = 0x9e3779b9U;
+ 
+ template <int size> static unsigned hash(ValueImp *pointer);
+ 
+-template <> static inline unsigned hash<4>(ValueImp *pointer) 
++template <> inline unsigned hash<4>(ValueImp *pointer) 
+ {
+   int a = (int)(intptr_t)PHI;
+   int b = (int)(intptr_t)pointer;
+@@ -214,7 +214,7 @@ template <> static inline unsigned hash<
+   return (unsigned)c;
+ }
+ 
+-template <> static inline unsigned hash<8>(ValueImp *pointer)
++template <> inline unsigned hash<8>(ValueImp *pointer)
+ {
+   int a = (int)PHI;
+   int b = (int)(intptr_t)pointer;
